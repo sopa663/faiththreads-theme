@@ -3,7 +3,7 @@
   .ft-hero {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     min-height: 680px;
     overflow: hidden;
     background: #191817;
@@ -16,7 +16,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 30%;
+    object-position: center 18%;
   }
 
   .ft-hero__overlay {
@@ -24,10 +24,10 @@
     inset: 0;
     background: linear-gradient(
       90deg,
-      rgba(0,0,0,.82) 0%,
-      rgba(0,0,0,.62) 34%,
-      rgba(0,0,0,.20) 68%,
-      rgba(0,0,0,.08) 100%
+      rgba(0,0,0,.78) 0%,
+      rgba(0,0,0,.58) 32%,
+      rgba(0,0,0,.16) 65%,
+      rgba(0,0,0,.05) 100%
     );
   }
 
@@ -35,32 +35,34 @@
     position: relative;
     z-index: 2;
     width: 100%;
-    max-width: 1320px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 100px 7%;
+    padding: 80px 6% 100px;
   }
 
   .ft-hero__eyebrow {
     font-size: 11px;
     letter-spacing: .28em;
-    margin: 0 0 24px;
+    margin: 0 0 22px;
+    color: #fff;
   }
 
   .ft-hero__heading {
     color: #fff;
-    font-size: clamp(56px, 6.4vw, 92px);
+    font-size: clamp(58px, 6vw, 82px);
     line-height: .94;
     letter-spacing: -.065em;
-    max-width: 650px;
+    max-width: 470px;
     margin: 0;
     text-wrap: balance;
   }
 
   .ft-hero__description {
-    max-width: 430px;
-    margin: 26px 0 30px;
+    max-width: 390px;
+    margin: 24px 0 28px;
     color: #e5e2dd;
     line-height: 1.7;
+    font-size: 14px;
   }
 
   .ft-hero__button {
@@ -71,12 +73,11 @@
     text-decoration: none;
     font-size: 11px;
     letter-spacing: .16em;
-    transition: background .25s ease, color .25s ease;
+    transition: background .25s ease;
   }
 
   .ft-hero__button:hover {
     background: #fff;
-    color: #000;
   }
 
   @media (min-width: 1500px) {
@@ -92,20 +93,20 @@
     }
 
     .ft-hero__image {
-      object-position: 58% 30%;
+      object-position: center 18%;
     }
 
     .ft-hero__overlay {
       background: linear-gradient(
         0deg,
-        rgba(0,0,0,.88) 0%,
-        rgba(0,0,0,.62) 42%,
-        rgba(0,0,0,.18) 100%
+        rgba(0,0,0,.90) 0%,
+        rgba(0,0,0,.65) 40%,
+        rgba(0,0,0,.12) 100%
       );
     }
 
     .ft-hero__content {
-      padding: 56px 24px 64px;
+      padding: 50px 24px 58px;
     }
 
     .ft-hero__eyebrow {
@@ -113,14 +114,15 @@
     }
 
     .ft-hero__heading {
-      font-size: clamp(48px, 12vw, 68px);
+      font-size: clamp(50px, 12vw, 68px);
+      max-width: 360px;
       line-height: .96;
-      max-width: 100%;
     }
 
     .ft-hero__description {
       margin: 20px 0 24px;
-      max-width: 360px;
+      max-width: 340px;
+      font-size: 13px;
     }
   }
 {% endstyle %}

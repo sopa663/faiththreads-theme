@@ -1,0 +1,122 @@
+
+{% style %}
+  .ft-manifesto {
+    background: #eeeae1;
+    color: #171717;
+    padding: 110px 24px;
+  }
+
+  .ft-manifesto__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .ft-manifesto__eyebrow {
+    font-size: 10px;
+    letter-spacing: .3em;
+    margin: 0 0 32px;
+  }
+
+  .ft-manifesto__heading {
+    font-size: clamp(38px, 6vw, 76px);
+    line-height: .98;
+    letter-spacing: -.055em;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #171717;
+  }
+
+  .ft-manifesto__text {
+    max-width: 590px;
+    margin: 30px auto 0;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #555149;
+  }
+
+  .ft-manifesto__verse {
+    margin-top: 44px;
+    font-size: 11px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+  }
+
+  .ft-manifesto__rule {
+    width: 42px;
+    height: 1px;
+    background: #171717;
+    margin: 28px auto;
+  }
+
+  @media (max-width: 749px) {
+    .ft-manifesto {
+      padding: 76px 24px;
+    }
+
+    .ft-manifesto__text {
+      font-size: 14px;
+    }
+  }
+{% endstyle %}
+
+<section class="ft-manifesto">
+  <div class="ft-manifesto__inner">
+
+    <p class="ft-manifesto__eyebrow">
+      {{ section.settings.eyebrow | escape }}
+    </p>
+
+    <h2 class="ft-manifesto__heading">
+      {{ section.settings.heading | escape }}
+    </h2>
+
+    <div class="ft-manifesto__rule"></div>
+
+    <div class="ft-manifesto__text">
+      {{ section.settings.description | escape }}
+    </div>
+
+    <p class="ft-manifesto__verse">
+      {{ section.settings.verse | escape }}
+    </p>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "FaithThreads Manifesto",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "MORE THAN A LABEL"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main heading",
+      "default": "BUILT ON FAITH. WORN WITH PURPOSE."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Brand statement",
+      "default": "FaithThreads represents what we believe, what we stand for, and the values we carry every day. Created to make faith part of everyday life."
+    },
+    {
+      "type": "text",
+      "id": "verse",
+      "label": "Scripture reference",
+      "default": "HEBREWS 11:1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "FaithThreads Manifesto"
+    }
+  ]
+}
+{% endschema %}

@@ -64,11 +64,22 @@
         "button_label": "DISCOVER THE COLLECTION",
         "button_link": ""
       }
+    },
+    "faiththreads_manifesto_QDCW9m": {
+      "type": "faiththreads-manifesto",
+      "name": "FaithThreads Manifesto",
+      "settings": {
+        "eyebrow": "MORE THAN A LABEL",
+        "heading": "BUILT ON FAITH. WORN WITH PURPOSE.",
+        "description": "FaithThreads represents what we believe, what we stand for, and the values we carry every day. Created to make faith part of everyday life.",
+        "verse": "HEBREWS 11:1"
+      }
     }
   },
   "order": [
     "announcement-bar",
     "header",
-    "faiththreads_hero_4eaLQa"
+    "faiththreads_hero_4eaLQa",
+    "faiththreads_manifesto_QDCW9m"
   ]
 }
